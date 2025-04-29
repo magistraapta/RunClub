@@ -16,6 +16,7 @@
 		FE379F8D2DBFCD7400550E87 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE379F8C2DBFCD7400550E87 /* MapView.swift */; };
 		FEA4EE222DC09FF2005FCCEA /* StatsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEA4EE212DC09FF2005FCCEA /* StatsView.swift */; };
 		FEA4EE242DC0A521005FCCEA /* RunSessionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEA4EE232DC0A521005FCCEA /* RunSessionModel.swift */; };
+		FEA4EE262DC0F76F005FCCEA /* RunningView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEA4EE252DC0F76F005FCCEA /* RunningView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,7 @@
 		FE379F8C2DBFCD7400550E87 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		FEA4EE212DC09FF2005FCCEA /* StatsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsView.swift; sourceTree = "<group>"; };
 		FEA4EE232DC0A521005FCCEA /* RunSessionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunSessionModel.swift; sourceTree = "<group>"; };
+		FEA4EE252DC0F76F005FCCEA /* RunningView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunningView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +88,7 @@
 				FE379F862DBFC8DE00550E87 /* HomeView.swift */,
 				FE379F8C2DBFCD7400550E87 /* MapView.swift */,
 				FEA4EE212DC09FF2005FCCEA /* StatsView.swift */,
+				FEA4EE252DC0F76F005FCCEA /* RunningView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -176,6 +179,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FEA4EE262DC0F76F005FCCEA /* RunningView.swift in Sources */,
 				FEA4EE242DC0A521005FCCEA /* RunSessionModel.swift in Sources */,
 				FE379F8B2DBFCBC300550E87 /* LocationManager.swift in Sources */,
 				FE379F872DBFC8DE00550E87 /* HomeView.swift in Sources */,

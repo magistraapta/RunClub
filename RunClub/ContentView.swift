@@ -16,9 +16,10 @@ struct ContentView: View {
     @State var selectedTab: Tab = .home
     var body: some View {
         TabView(selection: $selectedTab) {
-            HomeView()
+            
+            RunningView()
                 .tabItem {
-                    Label("Home", systemImage: "house")
+                    Label("Record", systemImage: "record.circle.fill")
                 }
             StatsView()
                 .tabItem {
