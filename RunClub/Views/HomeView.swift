@@ -7,59 +7,36 @@
 
 import SwiftUI
 
+
+
 struct HomeView: View {
+    @EnvironmentObject var runStore: RunStore
     @StateObject var locationManager = LocationManager()
     var body: some View {
-        VStack (alignment: .leading) {
-            
-            
+        VStack(alignment: .leading) {
             Text("RunClub")
                 .font(.largeTitle)
                 .bold()
-            
-            Spacer()
-            
-            VStack {
-                RunningMapView(locationManager: locationManager)
-//                    .edgesIgnoringSafeArea(.all)
-//                    .frame(height: 600)
-                    .ignoresSafeArea()
-                    .frame(maxWidth: .infinity, maxHeight: .infinity)
 
-                
-                Text(String(format: "Distance: %.2f meters", locationManager.totalDistance))
-                                .padding()
-                
-                HStack (spacing: 8){
-                    Button {
-                        locationManager.startTracking()
-                    } label: {
-                        Text("Start Run")
-                            .foregroundColor(.white)
-                            .padding()
-                            .background(locationManager.isTracking ? Color.gray : Color.green)
-                            .cornerRadius(10)
-                    }
-                    .disabled(locationManager.isTracking)
-                    
-                    if locationManager.isTracking {
-                        Button {
-                            locationManager.stopTracking()
-                        } label: {
-                            Text("Stop Run")
-                                .foregroundColor(.white)
-                                .padding()
-                                .background(Color.red)
-                                .cornerRadius(10)
-                        }
-                    }
+            Spacer()
+
+            ScrollView {
+                ForEach(runStore.runSessions) { runSession in
+                    RunSessionCard(
+                        title: runSession.title,
+                        date: formatDate(runSession.date),
+                        coordinate: runSession.route.map { $0.cllocationCoordinate2D }
+                    )
                 }
             }
-            
-            
-            Spacer()
         }
         .padding()
+    }
+    
+    private func formatDate(_ date: Date) -> String {
+        let formatter = DateFormatter()
+        formatter.dateStyle = .medium
+        return formatter.string(from: date)
     }
 }
 

@@ -20,6 +20,12 @@ struct RunningMapView: UIViewRepresentable {
     }
 
     func updateUIView(_ uiView: MKMapView, context: Context) {
+        if let currentLocation = locationManager.currentLocation {
+            if !locationManager.isTracking || locationManager.locations.isEmpty {
+                let region = MKCoordinateRegion(center: currentLocation, span: MKCoordinateSpan(latitudeDelta: 0.005, longitudeDelta: 0.005))
+                uiView.setRegion(region, animated: true)
+            }
+         }
         uiView.removeOverlays(uiView.overlays)
 
         let coordinates = locationManager.locations

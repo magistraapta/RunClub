@@ -11,11 +11,13 @@ import CoreLocation
 
 struct RunSession: Identifiable, Codable {
     var id = UUID()
+    let title: String
     let date: Date
     let duration: TimeInterval
     let distance: Double
     let averagePace: Double
     let route: [Coordinate]
+    let notes: String?
 }
 
 struct Coordinate: Codable {

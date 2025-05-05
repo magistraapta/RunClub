@@ -16,6 +16,7 @@ class LocationManager: NSObject, ObservableObject, CLLocationManagerDelegate {
     @Published var totalDistance: Double = 0.0
     @Published var averagePace: Double = 0
     @Published var isTracking: Bool = false
+    @Published var currentLocation: CLLocationCoordinate2D?
     
     private var timer: Timer?
     private var lastLocation: CLLocation?
@@ -71,6 +72,11 @@ class LocationManager: NSObject, ObservableObject, CLLocationManagerDelegate {
     
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations newLocations: [CLLocation]) {
+        
+        if let latestLocation = newLocations.last {
+            self.currentLocation = latestLocation.coordinate
+        }
+        
         guard isTracking else { return }
         
         for newLocation in newLocations {

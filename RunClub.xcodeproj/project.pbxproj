@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FE0EA0022DC86F0500186CC1 /* RunSessionCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE0EA0012DC86F0500186CC1 /* RunSessionCard.swift */; };
+		FE0EA0042DC8750700186CC1 /* SaveRunSessionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE0EA0032DC8750700186CC1 /* SaveRunSessionsView.swift */; };
+		FE0EA0062DC8753400186CC1 /* RunStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE0EA0052DC8753400186CC1 /* RunStore.swift */; };
+		FE0EA0082DC87F5800186CC1 /* RunSessionDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE0EA0072DC87F5800186CC1 /* RunSessionDetailView.swift */; };
 		FE379F782DBFC88E00550E87 /* RunClubApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE379F772DBFC88E00550E87 /* RunClubApp.swift */; };
 		FE379F7A2DBFC88E00550E87 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE379F792DBFC88E00550E87 /* ContentView.swift */; };
 		FE379F7C2DBFC88F00550E87 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FE379F7B2DBFC88F00550E87 /* Assets.xcassets */; };
@@ -20,6 +24,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FE0EA0012DC86F0500186CC1 /* RunSessionCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunSessionCard.swift; sourceTree = "<group>"; };
+		FE0EA0032DC8750700186CC1 /* SaveRunSessionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveRunSessionsView.swift; sourceTree = "<group>"; };
+		FE0EA0052DC8753400186CC1 /* RunStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunStore.swift; sourceTree = "<group>"; };
+		FE0EA0072DC87F5800186CC1 /* RunSessionDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunSessionDetailView.swift; sourceTree = "<group>"; };
 		FE379F742DBFC88E00550E87 /* RunClub.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RunClub.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE379F772DBFC88E00550E87 /* RunClubApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunClubApp.swift; sourceTree = "<group>"; };
 		FE379F792DBFC88E00550E87 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -44,6 +52,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FE0EA0002DC86EF300186CC1 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				FE0EA0012DC86F0500186CC1 /* RunSessionCard.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
 		FE379F6B2DBFC88E00550E87 = {
 			isa = PBXGroup;
 			children = (
@@ -85,10 +101,13 @@
 		FE379F852DBFC8D200550E87 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				FE0EA0002DC86EF300186CC1 /* Components */,
 				FE379F862DBFC8DE00550E87 /* HomeView.swift */,
 				FE379F8C2DBFCD7400550E87 /* MapView.swift */,
 				FEA4EE212DC09FF2005FCCEA /* StatsView.swift */,
 				FEA4EE252DC0F76F005FCCEA /* RunningView.swift */,
+				FE0EA0032DC8750700186CC1 /* SaveRunSessionsView.swift */,
+				FE0EA0072DC87F5800186CC1 /* RunSessionDetailView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -97,6 +116,7 @@
 			isa = PBXGroup;
 			children = (
 				FE379F8A2DBFCBC300550E87 /* LocationManager.swift */,
+				FE0EA0052DC8753400186CC1 /* RunStore.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -179,11 +199,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FE0EA0042DC8750700186CC1 /* SaveRunSessionsView.swift in Sources */,
 				FEA4EE262DC0F76F005FCCEA /* RunningView.swift in Sources */,
 				FEA4EE242DC0A521005FCCEA /* RunSessionModel.swift in Sources */,
 				FE379F8B2DBFCBC300550E87 /* LocationManager.swift in Sources */,
+				FE0EA0082DC87F5800186CC1 /* RunSessionDetailView.swift in Sources */,
 				FE379F872DBFC8DE00550E87 /* HomeView.swift in Sources */,
+				FE0EA0022DC86F0500186CC1 /* RunSessionCard.swift in Sources */,
 				FEA4EE222DC09FF2005FCCEA /* StatsView.swift in Sources */,
+				FE0EA0062DC8753400186CC1 /* RunStore.swift in Sources */,
 				FE379F8D2DBFCD7400550E87 /* MapView.swift in Sources */,
 				FE379F7A2DBFC88E00550E87 /* ContentView.swift in Sources */,
 				FE379F782DBFC88E00550E87 /* RunClubApp.swift in Sources */,
